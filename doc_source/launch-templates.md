@@ -87,6 +87,9 @@ When using a custom AMI, Amazon EKS doesn't merge any user data\. Rather, you ar
 
 To use a custom AMI with managed node groups, specify an AMI ID in the `imageId` field of the launch template\. To update your node group to a newer version of a custom AMI, create a new version of the launch template with an updated AMI ID, and update the node group with the new launch template version\.
 
+**Note**
+Custom Windows AMIs are not currently supported. You can track the progress of Windows AMI support in the [Github issue](https://github.com/aws/containers-roadmap/issues/584)\.
+
 **Limitations of using custom AMIs with managed node groups**
 + You must create a new node group to switch between using custom AMIs and Amazon EKS optimized AMIs\.
 + The following fields can't be set in the API if you're using a custom AMI
